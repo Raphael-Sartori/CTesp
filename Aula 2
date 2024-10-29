@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+             EXERCICIO 1
+            Console.OutputEncoding = System.Text.Encoding.UTF8;//Para poder usar o € (:
+
+            string produto1 = "Computador";
+            string produto2 = "Mesa de escritorio";
+            byte idade = 30;
+            int codigo = 5290;
+            char genero = 'M';
+            double preco1 = 2100.0;
+            double preco2 = 650.50;
+            double medida = 53.234567;
+            Console.WriteLine("Produtos:");
+            //pause
+            Console.WriteLine( $"{produto1}  Cujo preço é €{preco1:F2}");
+            Console.WriteLine($"{produto2}  Cujo preço é €{preco2:F2}");
+            Console.WriteLine($"\nRegistro  {idade} anos de idade, codigo {codigo} gênero: {genero}" );
+            Console.WriteLine($"\nMedida com oito casas decimais: {medida:F9}");
+            Console.WriteLine($"arredondado (quatro casas decimais): {medida:F4}");
+            Console.WriteLine($"Separador decimal invariant Culture:" + medida.ToString("F3", CultureInfo.InvariantCulture));
+            Console.ReadKey();
+            */
+
+            /* Exercicio 2
+            string nome;
+            int qtdQuartos, idade;
+            decimal preco;
+
+            Console.Write("Nome Completo:");
+            nome = Console.ReadLine();
+
+            Console.Write("Quantidade de quartos:");
+            qtdQuartos = int.Parse(Console.ReadLine());
+            
+            Console.Write("Idade:");
+            idade = int.Parse(Console.ReadLine());
+
+            Console.Write("preço de um produto:");
+            preco = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine($"\n{nome}\n{qtdQuartos}\n{idade}\n{preco:F2}");
+
+            Console.ReadKey();
+
+            */
+
+            /*Exercicio 3*/
+
+            double num1, num2, resultado;
+            string operador;
+
+            Console.WriteLine("Maquina de Calcular");
+            Console.WriteLine("1ºNumero");
+            num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("2ºNumero");
+            num2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Operador aritmético (+,-,*,/):");
+            operador =Console.ReadLine();
+
+            switch(operador)
+            {
+                case "+":
+                    resultado = num1 + num2;
+                    Console.WriteLine($"Resultado: {num1} + {num2} = {resultado}");
+                    break;
+
+                case "-":
+                    resultado = num1 - num2;
+                    Console.WriteLine($"Resultado: {num1} - {num2} = {resultado}");
+                    break;
+
+                case "*":
+                    resultado = num1 * num2;
+                    Console.WriteLine($"Resultado: {num1} * {num2} = {resultado}");
+                    break;
+
+                case "/":
+                    if (num1 != 0)
+                    {
+                        resultado = num1 / num2;
+                        Console.WriteLine($"Resultado: {num2} / {num2} = {resultado}");
+                    }
+                    else
+                    {
+                       Console.WriteLine("Erro: Não é permitido dividir por zero");
+                    }
+                    break;
+               
+                default:
+                    Console.WriteLine("Operador Invalido");
+                    break;
+
+            }
+            Console.WriteLine("(:");
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
